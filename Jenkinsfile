@@ -26,7 +26,7 @@ stages {
                 echo "Testing the app"
             }
            }
-           stage("Test") {
+           stage("Publish") {
             when { expression { params.BUILDTYPE == 'Publish' }  }
             steps {
                 println "\033[34m............Dropping the artifacts..............\033[0m"
