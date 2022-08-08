@@ -13,12 +13,12 @@ parameters {
 stages {
            stage("Build & Test") {
              steps {
-              sh 'echo "Building the app"'
+              echo "Building the app"
              }
            }
            stage("Test") {
             steps {
-             sh 'echo "Testing the app"'
+               'echo "Testing the app"
             }
            }
         }  
