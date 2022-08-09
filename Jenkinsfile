@@ -56,6 +56,7 @@ stages {
            } 
            stage("merge check") {
             when { expression { params.BUILDTYPE == 'Build'  }  }
+            steps {
                 println "\033[34m............merge check..............\033[0m"
                 echo "merge check"
             }
