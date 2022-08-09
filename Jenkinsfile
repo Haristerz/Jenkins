@@ -89,14 +89,8 @@ stages {
                 echo "Publishing the app"
             }
            } 
-           stage("assess and report the results") {
-            when { expression { params.BUILDTYPE == 'Build' || params.BUILDTYPE == 'Test' || params.BUILDTYPE == 'Logs'  }  }
-            steps {
-                println "\033[34m............assess and report the results..............\033[0m"
-                echo "assess and report the results"
-            }
-           } 
-           stage("publish the results") {
+ 
+           stage("publishing the results") {
             when { expression { params.BUILDTYPE == 'Build' || params.BUILDTYPE == 'Test' || params.BUILDTYPE == 'Logs'  }  }
             steps {
                 println "\033[34m............publish the results..............\033[0m"
