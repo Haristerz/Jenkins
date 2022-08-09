@@ -15,8 +15,9 @@ stages {
            stage("Build & Test") {
              when { expression { params.BUILDTYPE == 'Build & Test' }  }
              steps {
+              String s1 = "Main"
               println "\033[34m............Build and Test..............\033[0m"
-              echo "Building the app"
+                 echo "Building the app ${s1}"
              }
            }
            stage("Test") {
