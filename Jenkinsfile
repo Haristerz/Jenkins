@@ -24,6 +24,7 @@ stages {
             steps {
                 println "\033[34m............Testing the code..............\033[0m"
                 echo "Testing the app"
+                println "\033[34m............Test Completed..............\033[0m"
             }
            }
            stage("Publish") {
