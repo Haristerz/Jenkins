@@ -15,7 +15,7 @@ stages {
            stage("Build & Test") {
              when { expression { params.BUILDTYPE == 'Build & Test' }  }
              steps {
-              println "\033[34m............Build and Test..............\033[0m"
+              println "\033[34m............Build and Test (main branch modification)..............\033[0m"
               echo "Building the code"
              }
            }
