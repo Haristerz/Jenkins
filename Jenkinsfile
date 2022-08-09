@@ -20,7 +20,7 @@ stages {
              }
            }
            stage("Test") {
-            when { expression { params.BUILDTYPE == 'Test' }  }
+            when { expression { params.BUILDTYPE == 'Test' || params.BUILDTYPE == 'Build & Test' }  }
             steps {
                 println "\033[34m............Testing the code..............\033[0m"
                 echo "Testing the app"
