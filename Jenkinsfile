@@ -11,14 +11,14 @@ parameters {
 stages {
           
            stage("checkout code") {
-             when { expression { params.BUILDTYPE == 'Build'  }  }
+             when { expression { params.BUILDTYPE == 'Inspector'  }  }
              steps {
               println "\033[34m............checkout code..............\033[0m"
               echo "checkout code"
              }
            }
            stage("select build VM and Build") {
-             when { expression { params.BUILDTYPE == 'Test' ||  params.BUILDTYPE == 'Build'  }  }
+             when { expression { params.BUILDTYPE == 'Test' ||  params.BUILDTYPE == 'Component_name'  }  }
              steps {
                 println "\033[34m............select build VM and Build123..............\033[0m"
                 echo "select build VM and Build"
